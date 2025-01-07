@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Revit.Plugins.TrackingChangesBimModel": {
+      "commandName": "Project"
+    },
+    "Revit": {
+      "commandName": "Project"
+    }
+  }
+}
