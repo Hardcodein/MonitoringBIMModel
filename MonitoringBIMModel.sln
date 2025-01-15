@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonitoringBIMModel", "src\MonitoringBIMModel\MonitoringBIMModel.csproj", "{E072BE96-63B2-47A1-8551-920C49847201}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4380BBFC-E595-4C52-8FD4-D39252E3BB9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackChanges", "src\TrackChanges-master\TrackChanges\TrackChanges.csproj", "{71D7AA3C-646B-490F-A349-F877070F16CD}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RevitPlugin", "RevitPlugin", "{04B61491-D52D-4FCB-AF9A-99A55C756258}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Revit.Plugins.TrackingChangesBimModel.Infrastructure", "src\RevitPlugin\Revit.Plugins.TrackongChangesBimModel.Infrastructure\Revit.Plugins.TrackingChangesBimModel.Infrastructure.csproj", "{7F30BC71-EC5D-4F1C-84E4-5DB804AE404F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Revit.Plugins.TrackingChangesBimModel.Domain", "src\RevitPlugin\Revit.Plugins.TrackingChangesBimModel.Domain\Revit.Plugins.TrackingChangesBimModel.Domain.csproj", "{1CF347F7-5C75-46DC-84C4-E9CE6EC9F44A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Revit.Plugins.TrackingChangesBimModel.Application", "src\RevitPlugin\Revit.Plugin.TrackingChangesBimModel.Application\Revit.Plugins.TrackingChangesBimModel.Application.csproj", "{EC5BA346-F231-483F-8489-8C0E3A4329F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,17 +19,27 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E072BE96-63B2-47A1-8551-920C49847201}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E072BE96-63B2-47A1-8551-920C49847201}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E072BE96-63B2-47A1-8551-920C49847201}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E072BE96-63B2-47A1-8551-920C49847201}.Release|Any CPU.Build.0 = Release|Any CPU
-		{71D7AA3C-646B-490F-A349-F877070F16CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{71D7AA3C-646B-490F-A349-F877070F16CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{71D7AA3C-646B-490F-A349-F877070F16CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{71D7AA3C-646B-490F-A349-F877070F16CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F30BC71-EC5D-4F1C-84E4-5DB804AE404F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F30BC71-EC5D-4F1C-84E4-5DB804AE404F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F30BC71-EC5D-4F1C-84E4-5DB804AE404F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F30BC71-EC5D-4F1C-84E4-5DB804AE404F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CF347F7-5C75-46DC-84C4-E9CE6EC9F44A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CF347F7-5C75-46DC-84C4-E9CE6EC9F44A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CF347F7-5C75-46DC-84C4-E9CE6EC9F44A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CF347F7-5C75-46DC-84C4-E9CE6EC9F44A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC5BA346-F231-483F-8489-8C0E3A4329F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC5BA346-F231-483F-8489-8C0E3A4329F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC5BA346-F231-483F-8489-8C0E3A4329F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC5BA346-F231-483F-8489-8C0E3A4329F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{04B61491-D52D-4FCB-AF9A-99A55C756258} = {4380BBFC-E595-4C52-8FD4-D39252E3BB9A}
+		{7F30BC71-EC5D-4F1C-84E4-5DB804AE404F} = {04B61491-D52D-4FCB-AF9A-99A55C756258}
+		{1CF347F7-5C75-46DC-84C4-E9CE6EC9F44A} = {04B61491-D52D-4FCB-AF9A-99A55C756258}
+		{EC5BA346-F231-483F-8489-8C0E3A4329F9} = {04B61491-D52D-4FCB-AF9A-99A55C756258}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AE628FD8-B0E1-4164-BE5B-A46AA735B8D5}

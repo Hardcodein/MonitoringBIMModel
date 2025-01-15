@@ -1,5 +1,3 @@
-
-
 namespace TrackChanges;
 
 [Transaction(TransactionMode.ReadOnly)]
@@ -659,7 +657,7 @@ public class Command : IExternalCommand
     /// </summary>
     static Dictionary<int, string> _start_state = null;
 
-    #region External Command Mainline Execute Method
+    #region External Command Mainline  cute Method
     public Result Execute(
     ExternalCommandData commandData,
     ref string message,
