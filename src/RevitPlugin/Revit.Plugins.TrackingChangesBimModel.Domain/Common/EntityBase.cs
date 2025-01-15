@@ -1,4 +1,4 @@
-﻿namespace Revit.Plugins.TrackingChangesBimModel.Domain.Commom;
+﻿namespace Revit.Plugins.TrackingChangesBimModel.Domain.Common;
 
 public  class EntityBase
 {
