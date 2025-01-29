@@ -5,13 +5,15 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4380BBFC-E595-4C52-8FD4-D39252E3BB9A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RevitPlugin", "RevitPlugin", "{04B61491-D52D-4FCB-AF9A-99A55C756258}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackingChangesBimModel.Infrastructure", "src\TrackongChangesBimModel.Infrastructure\TrackingChangesBimModel.Infrastructure.csproj", "{2B105736-99A5-4E4B-A375-159D6EDF0A2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Revit.Plugins.TrackingChangesBimModel.Infrastructure", "src\RevitPlugin\Revit.Plugins.TrackongChangesBimModel.Infrastructure\Revit.Plugins.TrackingChangesBimModel.Infrastructure.csproj", "{7F30BC71-EC5D-4F1C-84E4-5DB804AE404F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackingChangesBimModel.Domain", "src\TrackingChangesBimModel.Domain\TrackingChangesBimModel.Domain.csproj", "{C9A2C19D-9D42-4677-AC31-5D6E2ADFB97C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Revit.Plugins.TrackingChangesBimModel.Domain", "src\RevitPlugin\Revit.Plugins.TrackingChangesBimModel.Domain\Revit.Plugins.TrackingChangesBimModel.Domain.csproj", "{1CF347F7-5C75-46DC-84C4-E9CE6EC9F44A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackingChangesBimModel.Application", "src\TrackingChangesBimModel.Application\TrackingChangesBimModel.Application.csproj", "{A5E0B412-3DA1-4C92-8052-F14EBB5842A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Revit.Plugins.TrackingChangesBimModel.Application", "src\RevitPlugin\Revit.Plugin.TrackingChangesBimModel.Application\Revit.Plugins.TrackingChangesBimModel.Application.csproj", "{EC5BA346-F231-483F-8489-8C0E3A4329F9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackingChangesBimModel.Presentation", "src\MonitoringBIMModel\TrackingChangesBimModel.Presentation.csproj", "{A177A37B-8B88-4105-9551-B74F51A726C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackingChangesBimModel.RevitPlugin", "src\TrackingChangesBimModel.RevitPlugin\TrackingChangesBimModel.RevitPlugin.csproj", "{0AC46511-B664-41DE-8588-149B2958C464}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,27 +21,35 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7F30BC71-EC5D-4F1C-84E4-5DB804AE404F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7F30BC71-EC5D-4F1C-84E4-5DB804AE404F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7F30BC71-EC5D-4F1C-84E4-5DB804AE404F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7F30BC71-EC5D-4F1C-84E4-5DB804AE404F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1CF347F7-5C75-46DC-84C4-E9CE6EC9F44A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1CF347F7-5C75-46DC-84C4-E9CE6EC9F44A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1CF347F7-5C75-46DC-84C4-E9CE6EC9F44A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1CF347F7-5C75-46DC-84C4-E9CE6EC9F44A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EC5BA346-F231-483F-8489-8C0E3A4329F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EC5BA346-F231-483F-8489-8C0E3A4329F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EC5BA346-F231-483F-8489-8C0E3A4329F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EC5BA346-F231-483F-8489-8C0E3A4329F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B105736-99A5-4E4B-A375-159D6EDF0A2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B105736-99A5-4E4B-A375-159D6EDF0A2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B105736-99A5-4E4B-A375-159D6EDF0A2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B105736-99A5-4E4B-A375-159D6EDF0A2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9A2C19D-9D42-4677-AC31-5D6E2ADFB97C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9A2C19D-9D42-4677-AC31-5D6E2ADFB97C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9A2C19D-9D42-4677-AC31-5D6E2ADFB97C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9A2C19D-9D42-4677-AC31-5D6E2ADFB97C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5E0B412-3DA1-4C92-8052-F14EBB5842A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5E0B412-3DA1-4C92-8052-F14EBB5842A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5E0B412-3DA1-4C92-8052-F14EBB5842A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5E0B412-3DA1-4C92-8052-F14EBB5842A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A177A37B-8B88-4105-9551-B74F51A726C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A177A37B-8B88-4105-9551-B74F51A726C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A177A37B-8B88-4105-9551-B74F51A726C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A177A37B-8B88-4105-9551-B74F51A726C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AC46511-B664-41DE-8588-149B2958C464}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AC46511-B664-41DE-8588-149B2958C464}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AC46511-B664-41DE-8588-149B2958C464}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AC46511-B664-41DE-8588-149B2958C464}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{04B61491-D52D-4FCB-AF9A-99A55C756258} = {4380BBFC-E595-4C52-8FD4-D39252E3BB9A}
-		{7F30BC71-EC5D-4F1C-84E4-5DB804AE404F} = {04B61491-D52D-4FCB-AF9A-99A55C756258}
-		{1CF347F7-5C75-46DC-84C4-E9CE6EC9F44A} = {04B61491-D52D-4FCB-AF9A-99A55C756258}
-		{EC5BA346-F231-483F-8489-8C0E3A4329F9} = {04B61491-D52D-4FCB-AF9A-99A55C756258}
+		{2B105736-99A5-4E4B-A375-159D6EDF0A2A} = {4380BBFC-E595-4C52-8FD4-D39252E3BB9A}
+		{C9A2C19D-9D42-4677-AC31-5D6E2ADFB97C} = {4380BBFC-E595-4C52-8FD4-D39252E3BB9A}
+		{A5E0B412-3DA1-4C92-8052-F14EBB5842A7} = {4380BBFC-E595-4C52-8FD4-D39252E3BB9A}
+		{A177A37B-8B88-4105-9551-B74F51A726C7} = {4380BBFC-E595-4C52-8FD4-D39252E3BB9A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AE628FD8-B0E1-4164-BE5B-A46AA735B8D5}
