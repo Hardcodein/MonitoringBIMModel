@@ -1,4 +1,6 @@
-﻿namespace Revit.Plugins.TrackingChangesBimModel.Domain.Entities;
+﻿using TrackingChangesBimModel.Domain.Common;
+
+namespace TrackingChangesBimModel.Domain.Entities;
 
 public class User : EntityBase
 {

@@ -1,6 +1,6 @@
 ﻿namespace TrackingChangesBimModel.RevitPlugin.Interfaces;
 
-internal interface ITrackerElementsForRevit
+internal interface ITrackerElementsRevitt
 {
      Task<IEnumerable<Element>> GetAllElements(Document document);
 }

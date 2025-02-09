@@ -1,6 +1,6 @@
 ﻿namespace TrackingChangesBimModel.RevitPlugin;
 
-internal class Constants
+internal static  class Constants
 {
-
+    public  const double Eps = 1.0e-9;
 }
