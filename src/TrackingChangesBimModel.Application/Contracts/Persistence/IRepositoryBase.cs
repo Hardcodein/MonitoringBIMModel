@@ -1,4 +1,4 @@
-﻿namespace Revit.Plugins.TrackingChangesBimModel.Application.Contracts.Persistence;
+﻿namespace TrackingChangesBimModel.Application.Contracts.Persistence;
 
 public interface IRepositoryBase<T> where T : Domain.Common.EntityBase
 {

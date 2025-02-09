@@ -1,4 +1,7 @@
-﻿namespace Revit.Plugins.TrackingChangesBimModel.Infrastructure.Repositories;
+﻿using TrackingChangesBimModel.Application.Contracts.Persistence;
+using TrackingChangesBimModel.Infrastructure.Persistence;
+
+namespace TrackingChangesBimModel.Infrastructure.Repositories;
 
 public class RepositoryBase<T> : IRepositoryBase<T> where T : Domain.Common.EntityBase
 {
@@ -18,9 +21,9 @@ public class RepositoryBase<T> : IRepositoryBase<T> where T : Domain.Common.Enti
     }
 
     public async Task<IReadOnlyList<T>> GetAsync(
-        Expression<Func<T, bool>>? predicate = null, 
-        Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null, 
-        string? includeString = null, 
+        Expression<Func<T, bool>>? predicate = null,
+        Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null,
+        string? includeString = null,
         bool disableTracking = true)
     {
         IQueryable<T> query = _dbContext.Set<T>();
@@ -28,10 +31,10 @@ public class RepositoryBase<T> : IRepositoryBase<T> where T : Domain.Common.Enti
         if (disableTracking)
             query = query.AsNoTracking();
 
-        if(!string.IsNullOrWhiteSpace(includeString))
+        if (!string.IsNullOrWhiteSpace(includeString))
             query = query.Include(includeString);
 
-        if(predicate != null)
+        if (predicate != null)
             query = query.Where(predicate);
 
         if (orderBy != null)
@@ -42,20 +45,20 @@ public class RepositoryBase<T> : IRepositoryBase<T> where T : Domain.Common.Enti
     }
 
     public async Task<IReadOnlyList<T>> GetAsync(
-        Expression<Func<T, bool>>? predicate = null, 
-        Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null, 
-        List<Expression<Func<T, object>>>? includes = null, 
+        Expression<Func<T, bool>>? predicate = null,
+        Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null,
+        List<Expression<Func<T, object>>>? includes = null,
         bool disableTracking = true)
     {
         IQueryable<T> query = _dbContext.Set<T>();
 
-        if(disableTracking)
+        if (disableTracking)
             query = query.AsNoTracking();
 
         if (includes != null)
             query = includes.Aggregate(query, (current, includes) => current.Include(includes));
 
-        if(predicate !=null)
+        if (predicate != null)
             query = query.Where(predicate);
 
         if (orderBy != null)
@@ -66,7 +69,7 @@ public class RepositoryBase<T> : IRepositoryBase<T> where T : Domain.Common.Enti
 
     public virtual async Task<T?> GetByIdAsync(Guid id)
     {
-        return await _dbContext.Set<T>().FindAsync(id); 
+        return await _dbContext.Set<T>().FindAsync(id);
     }
     public async Task<T> AddASync(T entity)
     {

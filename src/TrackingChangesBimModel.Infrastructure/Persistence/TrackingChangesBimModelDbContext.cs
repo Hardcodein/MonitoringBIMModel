@@ -1,4 +1,7 @@
-﻿namespace Revit.Plugins.TrackingChangesBimModel.Infrastructure.Persistence;
+﻿using TrackingChangesBimModel.Domain.Common;
+using TrackingChangesBimModel.Domain.Entities;
+
+namespace TrackingChangesBimModel.Infrastructure.Persistence;
 
 public class TrackingChangesBimModelDbContext : DbContext
 {
