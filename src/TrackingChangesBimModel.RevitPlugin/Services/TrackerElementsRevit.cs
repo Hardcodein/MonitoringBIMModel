@@ -1,5 +1,5 @@
 ﻿namespace TrackingChangesBimModel.RevitPlugin.Services;
-internal class TrackerElementsExternalProgram : ITrackerElementsForRevit
+internal class TrackerElementsRevit : ITrackerElementsRevitt
 {
     public Task<IEnumerable<Element>> GetAllElements(Document document)
     {
